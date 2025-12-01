@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #F5F5F5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21.0.1" fx:controller="com.example.Page3Controller">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #2C3E50; -fx-padding: 15;">
+            <children>
+                <Label style="-fx-font-size: 14px;" text="Fonctionnalité :" textFill="white" />
+                <Button fx:id="accueilButton" onAction="#onAccueilClicked" style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Retour à l'accueil" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="30" left="40" right="40" top="30" />
+            </padding>
+            <children>
+
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Réglage des préférences" />
+
+                <GridPane hgap="20.0" vgap="20.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" />
+                        <ColumnConstraints hgrow="ALWAYS" />
+                    </columnConstraints>
+
+                    <children>
+                        <Label text="BIRTH_DATE" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <Slider fx:id="birthDateSlider" majorTickUnit="25" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label text="GUEST_ANIMAL_ALLERGY" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <Slider fx:id="guestAnimalAllergySlider" majorTickUnit="25" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="HOST_HAS_ANIMAL" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <Slider fx:id="hostHasAnimalSlider" majorTickUnit="25" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label text="GUEST_FOOD_CONSTRAINT" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <Slider fx:id="guestFoodConstraintSlider" majorTickUnit="25" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <Label text="HOST_FOOD" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <Slider fx:id="hostFoodSlider" majorTickUnit="25" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <Label text="HOBBIES" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <Slider fx:id="hobbiesSlider" majorTickUnit="25" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                        <Label text="GENDER" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                        <Slider fx:id="genderSlider" majorTickUnit="25" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                        <Label text="PAIR_GENDER" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                        <Slider fx:id="pairGenderSlider" majorTickUnit="25" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                    </children>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

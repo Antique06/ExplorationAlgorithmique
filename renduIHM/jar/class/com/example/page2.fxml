@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0"
+            style="-fx-background-color: #F5F5F5;"
+            xmlns="http://javafx.com/javafx/21.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.Page2Controller">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20.0"
+              style="-fx-background-color: #2C3E50; -fx-padding: 15;"
+              BorderPane.alignment="CENTER">
+            <children>
+                <Label style="-fx-font-size: 14px;" text="Fonctionnalité :" textFill="white" />
+                <Button fx:id="accueilButton" onAction="#onAccueilClicked"
+                        style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Retour à l'accueil" />
+                <Button fx:id="preferencesButton" onAction="#onPreferencesClicked"
+                        style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Préférences" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <GridPane hgap="30" vgap="10" GridPane.vgrow="ALWAYS">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="20.0"/>
+                <ColumnConstraints percentWidth="26.66"/>
+                <ColumnConstraints percentWidth="26.66"/>
+                <ColumnConstraints percentWidth="26.66"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS"/>
+            </rowConstraints>
+
+            <VBox spacing="20" GridPane.vgrow="ALWAYS" VBox.vgrow="ALWAYS" maxWidth="Infinity">
+                <children>
+                    <Label text="Liste des Adolescents" />
+                    <TableView fx:id="tabAdolescents" VBox.vgrow="ALWAYS" maxWidth="Infinity">
+                        <columns>
+                            <TableColumn fx:id="colFORENAME" text="FORENAME" />
+                            <TableColumn fx:id="colNAME" text="NAME" />
+                            <TableColumn fx:id="colBIRTH_DATE" text="BIRTH_DATE" />
+                            <TableColumn fx:id="colCOUNTRY" text="COUNTRY" />
+                        </columns>
+                    </TableView>
+                </children>
+            </VBox>
+
+            <VBox GridPane.columnIndex="1" spacing="20"
+                  style="-fx-background-color: white; -fx-padding: 15; -fx-border-radius: 10; -fx-background-radius: 10;"
+                  VBox.vgrow="ALWAYS">
+                <children>
+                    <Label fx:id="nomPrenom1" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Nom et prénom" />
+                    <Label fx:id="gender1" text="Gender: " />
+                    <Label fx:id="country1" text="Country: " />
+                    <Label fx:id="hobbies1" text="Hobbies: " />
+                    <Label fx:id="birth_date1" text="Birth date: " />
+                    <Label fx:id="pair_gender1" text="Pair gender: " />
+                    <Label fx:id="guest_animal_allergy1" text="Guest animal allergy: " />
+                    <Label fx:id="host_has_animal1" text="Host has animal: " />
+                    <Label fx:id="guest_food_constraint1" text="Guest food constraint: " />
+                    <Label fx:id="host_food1" text="Host food: " />
+                    <Label fx:id="history1" text="History: " />
+                    <ImageView fitHeight="60.0" fitWidth="60.0" />
+                </children>
+            </VBox>
+
+            <VBox GridPane.columnIndex="2" spacing="30" VBox.vgrow="ALWAYS">
+                <children>
+                    <HBox spacing="10.0">
+                        <Label prefWidth="160" text="BIRTH_DATE" />
+                        <Slider fx:id="birthDateSlider" disable="true" max="1.0" maxWidth="300"
+                                showTickLabels="true" showTickMarks="true" />
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Label prefWidth="160" text="ANIMAL_ALLERGY" />
+                        <Slider fx:id="guestAnimalAllergySlider" disable="true" max="1.0" maxWidth="300"
+                                showTickLabels="true" showTickMarks="true" />
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Label prefWidth="160" text="FOOD_CONSTRAINT" />
+                        <Slider fx:id="guestFoodConstraintSlider" disable="true" max="1.0" maxWidth="300"
+                                showTickLabels="true" showTickMarks="true" />
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Label prefWidth="160" text="HOBBIES" />
+                        <Slider fx:id="hobbiesSlider" disable="true" max="1.0" maxWidth="300"
+                                showTickLabels="true" showTickMarks="true" />
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Label prefWidth="160" text="GENDER / PAIR_GENDER" />
+                        <Slider fx:id="genderSlider" disable="true" max="1.0" maxWidth="300"
+                                showTickLabels="true" showTickMarks="true" />
+                    </HBox>
+                </children>
+            </VBox>
+
+            <VBox GridPane.columnIndex="3" spacing="20"
+                  style="-fx-background-color: white; -fx-padding: 15; -fx-border-radius: 10; -fx-background-radius: 10;"
+                  VBox.vgrow="ALWAYS">
+                <children>
+                    <Label fx:id="nomPrenom2" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Nom et prénom" />
+                    <Label fx:id="gender2" text="Gender: " />
+                    <Label fx:id="country2" text="Country: " />
+                    <Label fx:id="hobbies2" text="Hobbies: " />
+                    <Label fx:id="birth_date2" text="Birth date: " />
+                    <Label fx:id="pair_gender2" text="Pair gender: " />
+                    <Label fx:id="guest_animal_allergy2" text="Guest animal allergy: " />
+                    <Label fx:id="host_has_animal2" text="Host has animal: " />
+                    <Label fx:id="guest_food_constraint2" text="Guest food constraint: " />
+                    <Label fx:id="host_food2" text="Host food: " />
+                    <Label fx:id="history2" text="History: " />
+                    <ImageView fitHeight="60.0" fitWidth="60.0" />
+                </children>
+            </VBox>
+        </GridPane>
+    </center>
+</BorderPane>

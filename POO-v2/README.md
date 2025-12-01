@@ -1,0 +1,1 @@
+Rajout du critère en rapport avec les Français qui n'acceptent pas de correspondant sans hobbies en commun. Rajout de la validité des critères par un mécanisme d'exception personnalisé nommé "CritereInvalideException".
